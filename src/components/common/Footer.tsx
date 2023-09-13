@@ -1,8 +1,13 @@
 import { FC } from "react";
+import Container from "@common/Container";
 
 const Footer: FC = () => {
   return (
-    <div>Footer</div>
+    <footer className="py-6 border-t mt-10">
+      <Container>
+        Footer
+      </Container>
+    </footer>
   )
 }
 

@@ -1,12 +1,12 @@
-import './globals.css'
+import './globals.css';
 import type { Metadata } from 'next'
-import { Inter } from 'next/font/google'
 import { FC, ReactNode } from "react";
 
 import Navigation from "@common/Navigation";
 import Footer from "@common/Footer";
+import { montserrat, quicksand } from "@utils/font";
 
-const inter = Inter({ subsets: ['latin'] })
+
 
 export const metadata: Metadata = {
   title: 'Create Next App',
@@ -19,15 +19,15 @@ interface IRootLayout {
 
 const RootLayout: FC<IRootLayout> = ({ children }) => {
   return (
-    <html lang="en" >
-      <body>
+    <html lang="en">
+      <body className={`${montserrat.variable} ${quicksand.variable} font-sans`}>
         <Navigation />
         <main>
           {children}
         </main>
         <Footer />
       </body>
-    </html>
+    </html >
   )
 }
 

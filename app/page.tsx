@@ -1,7 +1,8 @@
 
 const Home = () => {
   return (
-    <div>page</div>
+    <div className="h-[1000px]">
+    </div>
   )
 }
 
