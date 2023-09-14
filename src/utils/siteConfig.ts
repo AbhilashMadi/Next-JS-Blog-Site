@@ -14,6 +14,7 @@ type SiteConfig = {
     github: string;
     linkedin: string;
     instagram: string;
+    facebook: string;
   };
 };
 
@@ -33,5 +34,6 @@ export const siteConfig: SiteConfig = {
     github: "#",
     linkedin: "#",
     instagram: "#",
+    facebook: "#",
   },
 };
