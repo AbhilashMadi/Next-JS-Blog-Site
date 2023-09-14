@@ -9,7 +9,7 @@ const Navigation: FC = () => {
     <header className="border-b bg-white sticky top-0 left-0 
       right-0 bg-clip-padding backdrop-filter backdrop-blur-md bg-opacity-50">
       <Container className="py-5 flex items-center justify-between">
-        <Link href={HOME} className="text-lg font-serif">
+        <Link href={HOME} className="text-2xl font-bold font-serif">
           {headers.explorer}
         </Link>
         <nav>
