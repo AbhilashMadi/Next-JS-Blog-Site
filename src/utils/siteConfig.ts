@@ -4,7 +4,6 @@ type SiteConfig = {
   description: string;
   currentlyAt: string;
   exploreTag: string;
-  socialLinksTxt: string;
   currentPlace: string;
   copyright: string;
   madeWith: string;
@@ -25,7 +24,6 @@ export const siteConfig: SiteConfig = {
   currentlyAt: "Currently At",
   currentPlace: "South Korea",
   exploreTag: "#exploretheworld",
-  socialLinksTxt: "Social Links",
   copyright: "All rights are reserved | Copyright",
   madeWith: "Made with 💓 By", 
   socialLinks: {

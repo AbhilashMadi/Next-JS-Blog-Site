@@ -16,7 +16,6 @@ const Footer: FC = () => {
         <div className="mt-6 flex justify-between flex-wrap gap-4">
           <div>
             <p className="font-medium">{siteConfig.exploreTag}</p>
-            <div className="mt-4">{siteConfig.socialLinksTxt}</div>
             <SocialLinks />
           </div>
           <div>
@@ -26,7 +25,7 @@ const Footer: FC = () => {
                 <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-500 opacity-75"></span>
                 <span className="relative inline-flex rounded-full h-2 w-2 bg-emerald-500"></span>
               </span>
-              <p className="font-semibold">{siteConfig.currentPlace}</p>
+              <p className="font-semibold font-hand text-lg">{siteConfig.currentPlace}</p>
             </div>
           </div>
         </div>

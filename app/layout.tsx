@@ -4,7 +4,7 @@ import { FC, ReactNode } from "react";
 
 import Navigation from "@common/Navigation";
 import Footer from "@common/Footer";
-import { montserrat, quicksand } from "@utils/font";
+import { montserrat, quicksand, caveat } from "@utils/font";
 
 
 
@@ -20,7 +20,7 @@ interface IRootLayout {
 const RootLayout: FC<IRootLayout> = ({ children }) => {
   return (
     <html lang="en">
-      <body className={`${montserrat.variable} ${quicksand.variable} font-sans`}>
+      <body className={`${montserrat.variable} ${quicksand.variable} ${caveat.variable} font-sans`}>
         <Navigation />
         <main>
           {children}

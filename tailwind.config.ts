@@ -11,6 +11,7 @@ const config: Config = {
     fontFamily: {
       sans: ["var(--font-montserrat)"],
       serif: ["var(--font-quicksand)"],
+      hand: ["var(--font-caveat)"],
     }
   },
   plugins: [],

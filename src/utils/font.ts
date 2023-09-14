@@ -1,4 +1,4 @@
-import { Montserrat, Quicksand } from "next/font/google";
+import { Montserrat, Quicksand, Caveat } from "next/font/google";
 
 export const montserrat = Montserrat({
   subsets: ["latin"],
@@ -9,3 +9,8 @@ export const quicksand = Quicksand({
   subsets: ["latin"],
   variable: "--font-quicksand",
 });
+
+export const caveat = Caveat({
+  subsets: ["latin"],
+  variable: "--font-caveat",
+})
