@@ -12,25 +12,32 @@ const SocialLinks: FC = () => {
   const { socialLinks } = siteConfig;
   const links: LinkObj[] = [
     {
-      icon: <TwitterIcon className="hover:text-cyan-400 cursor-pointer hover:scale-105" />,
+      icon: <TwitterIcon
+        size={18}
+        className="hover:text-cyan-400 cursor-pointer hover:scale-105" />,
       href: socialLinks.twitter,
     }, {
       icon: <FacebookIcon
+        size={18}
         className="hover:text-blue-500 cursor-pointer hover:scale-105" />,
       href: socialLinks.facebook,
     },
     {
       icon: <LinkedinIcon
+        size={18}
         className="hover:text-cyan-700 cursor-pointer hover:scale-105" />,
       href: socialLinks.linkedin,
     },
     {
       icon: <GithubIcon
+        size={18}
         className="hover:text-neutral-700 cursor-pointer hover:scale-105" />,
       href: socialLinks.github,
     },
     {
-      icon: <YoutubeIcon className="hover:text-red-500 cursor-pointer hover:scale-105" />,
+      icon: <YoutubeIcon
+        size={18}
+        className="hover:text-red-500 cursor-pointer hover:scale-105" />,
       href: socialLinks.youtube,
     }
   ];
