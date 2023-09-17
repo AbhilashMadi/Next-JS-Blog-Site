@@ -55,6 +55,12 @@
       ],
       "@atoms/*": [
         "./src/components/atoms/*",
+      ],
+      "@temp/*": [
+        "./src/temp/*",
+      ],
+      "@post/*": [
+        "./src/components/post/*",
       ]
     }
   },

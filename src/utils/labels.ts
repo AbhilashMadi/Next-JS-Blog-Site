@@ -8,3 +8,7 @@ export enum headers {
 export enum labels {
 
 };
+
+export enum buttons {
+  readMore = "Read More",
+}

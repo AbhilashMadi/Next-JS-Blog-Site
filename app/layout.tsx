@@ -22,7 +22,7 @@ const RootLayout: FC<IRootLayout> = ({ children }) => {
     <html lang="en">
       <body className={`${montserrat.variable} ${quicksand.variable} ${caveat.variable} font-sans`}>
         <Navigation />
-        <main>
+        <main className="pt-10">
           {children}
         </main>
         <Footer />

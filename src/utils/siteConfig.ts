@@ -25,7 +25,7 @@ export const siteConfig: SiteConfig = {
   currentPlace: "South Korea",
   exploreTag: "#exploretheworld",
   copyright: "All rights are reserved | Copyright",
-  madeWith: "Made with 💓 By", 
+  madeWith: "Made By", 
   socialLinks: {
     twitter: "#",
     youtube: "#",
