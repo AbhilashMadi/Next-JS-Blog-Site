@@ -15,8 +15,7 @@ const PostCard: FC<IPostCard> = (props) => {
   return (
     <section>
       <Link href={`/post/${post.slug}`}
-        className="cursor-pointer 
-        grid grid-cols-2 gap-10 items-center">
+        className="cursor-pointer flex gap-4 flex-col">
         <Image
           src={post.image}
           width={600}
