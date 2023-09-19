@@ -19,12 +19,10 @@ const CTACard: FC = () => {
       {/* Card Content */}
       <div className="relative z-20">
         <p className="text-lg font-medium">#exploretheworld</p>
-        <h3 className="mt-3 text-4xl font-semibold">Explore the world with me!</h3>
-        <p className="max-w-lg mt-2 text-lg">CTA Card Image
-          #exploretheworld
-          Explore the world with me!
-          Explore the world with me! I&rsquo;m travelling around the 🌍. I&rsquo;ve visited most of the great cities of 🇺🇸 and currently I&rsquo;m travelling in India Join me!</p>
-      <NewsletterForm />
+        <h3 className="mt-3 text-4xl font-semibold font-hand">Explore the world with me!</h3>
+        <p className="max-w-lg mt-2 text-md">
+          I&rsquo;m travelling around the 🌍. I&rsquo;ve visited most of the great cities of 🇺🇸 and currently I&rsquo;m travelling in India Join me!</p>
+        <NewsletterForm />
       </div>
     </div>
   )
