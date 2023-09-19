@@ -4,6 +4,7 @@ import { ArrowRight } from "lucide-react";
 import { Post } from "@temp/temp.types";
 import { getDynamicClass } from "@utils/dynamicClasses";
 import { buttons } from "@utils/labels";
+import { getReadingTime, getRelativeDate } from "@lib/helpers";
 
 interface IPostContent {
   post: Post;
@@ -39,11 +40,11 @@ const PostContent: FC<IPostContent> = (props) => {
         </span>
         <Dot />
         <span>
-          1min read
+          {getReadingTime(post.body)}
         </span>
         <Dot />
         <span>
-          1Month ago
+          {getRelativeDate(post.date_created)}
         </span>
       </p>
 

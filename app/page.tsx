@@ -4,11 +4,15 @@ import PostsList from "@post/PostsList";
 
 import { DUMMY_POSTS } from "@temp/collections";
 import { POST_LAYOUT } from "@lib/enums";
+import CTACard from "@atoms/CTACard";
 
 const Home = () => {
   return (
     <Container className="space-y-10">
       <PostCard post={DUMMY_POSTS[0]} />
+      <PostsList posts={DUMMY_POSTS.slice(1)} layout={POST_LAYOUT.VERTICAL} />
+      <CTACard />
+      <PostCard post={DUMMY_POSTS[0]} reverse />
       <PostsList posts={DUMMY_POSTS.slice(1)} layout={POST_LAYOUT.VERTICAL} />
     </Container>
   )
