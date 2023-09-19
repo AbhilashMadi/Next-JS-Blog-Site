@@ -2,25 +2,21 @@ import { FC } from "react";
 
 import { Post } from "@temp/temp.types";
 import PostCard from "./PostCard";
-
-enum LayoutTypes {
-  VIRTICAL = "virtical",
-  HORIZONTAL = "horizontal",
-}
+import { POST_LAYOUT } from "@lib/enums";
 
 interface IPostsList {
   posts: Post[];
-  layout?: LayoutTypes.HORIZONTAL
-  | LayoutTypes.VIRTICAL;
+  layout?: POST_LAYOUT.HORIZONTAL
+  | POST_LAYOUT.VERTICAL;
 }
 
 const PostsList: FC<IPostsList> = (props) => {
-  const { posts, layout = LayoutTypes.HORIZONTAL } = props;
+  const { posts, layout = POST_LAYOUT.HORIZONTAL } = props;
 
   return (
     <div className="grid grid-cols-2 gap-10">
       {posts.map((post: Post) => {
-        return <PostCard post={post} key={post.id} />
+        return <PostCard post={post} key={post.id} layout={layout}/>
       })}
     </div>
   )
