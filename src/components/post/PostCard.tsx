@@ -18,8 +18,8 @@ const PostCard: FC<IPostCard> = (props) => {
   return (
     <section>
       <Link href={`/post/${post.slug}`}
-        className={`cursor-pointer ${layout === POST_LAYOUT.HORIZONTAL
-          ? "grid grid-cols-2 items-center gap-10"
+        className={`@container cursor-pointer ${layout === POST_LAYOUT.HORIZONTAL
+          ? "grid grid-cols-1 md:grid-cols-2 items-center gap-10"
           : "space-y-10"}`}>
         <Image
           src={post.image}
@@ -28,7 +28,7 @@ const PostCard: FC<IPostCard> = (props) => {
           alt="post"
           className={`w-full object-cover rounded-md 
           object-center max-h-[300px] hover:shadow-xl
-          ${reverse && "order-last"}`} />
+          ${reverse && "md:order-last"}`} />
         <PostContent post={post} />
       </Link>
     </section>
