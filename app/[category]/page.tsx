@@ -33,7 +33,7 @@ const Category: FC<ICategoryPage> = (props) => {
 
   return (
     <Container>
-      <PostsList posts={posts} layout={POST_LAYOUT.VERTICAL} />
+      <PostsList posts={posts} layout={POST_LAYOUT.VERTICAL} autoCols/>
     </Container>
   )
 }
