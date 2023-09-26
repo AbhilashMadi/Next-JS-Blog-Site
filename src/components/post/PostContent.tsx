@@ -8,6 +8,7 @@ import { getReadingTime, getRelativeDate } from "@lib/helpers";
 
 interface IPostContent {
   post: Post;
+  isPostPage?: boolean;
 }
 
 const categoryColorClasses = [
@@ -26,11 +27,14 @@ const Dot = () => {
 }
 
 const PostContent: FC<IPostContent> = (props) => {
-  const { post } = props;
+  const { post, isPostPage = false } = props;
 
   return (
     <div className="space-y-2">
-      <p className="flex items-center gap-2 text-xs whitespace-nowrap @md:text-sm text-neutral-400">
+      <p className={`flex items-center gap-2 whitespace-nowrap text-neutral-400
+      ${isPostPage
+          ? "text-sm"
+          : "text-xs @md:text-sm"}`}>
         <span
           className={`${getDynamicClass(categoryColorClasses, post.category.title)}`}>{post.category.title}
         </span>
@@ -49,12 +53,15 @@ const PostContent: FC<IPostContent> = (props) => {
       </p>
 
       <div className="space-y-2">
-        <h1 className="font-bold text-neutral-700 @lg:text-3xl @md:text-2xl text-xl">{post.title}</h1>
+        <h1 className={`font-bold text-neutral-700 ${isPostPage
+          ? "text-2xl md:text-3xl lg:text-4xl"
+          : "@lg:text-3xl @md:text-2xl text-xl"
+          }`}>{post.title}</h1>
         <h3 className="leading-snug text-neutral-800 text-sm @lg:text-lg">{post.description}</h3>
       </div>
 
-      <button className="flex items-center gap-2 pt-3">{buttons.readMore} <ArrowRight size={14} className="-rotate-45" />
-      </button>
+      {!isPostPage && <button className="flex items-center gap-2 pt-3">{buttons.readMore} <ArrowRight size={14} className="-rotate-45" />
+      </button>}
     </div>
   )
 }

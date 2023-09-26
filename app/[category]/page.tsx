@@ -1,5 +1,4 @@
 import { FC } from "react";
-import { notFound } from "next/navigation";
 
 import { DUMMY_POSTS, DUMMY_CATEGORIES } from "@temp/collections";
 import { Post, Category } from "@temp/temp.types";
@@ -25,11 +24,7 @@ const Category: FC<ICategoryPage> = (props) => {
 
   const posts: Post[] = DUMMY_POSTS.filter((post: Post) => {
     return post.category.title.toLowerCase() === category;
-  })
-
-  if (!posts.length) {
-    notFound();
-  }
+  });
 
   return (
     <Container>

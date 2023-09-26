@@ -1,7 +1,8 @@
 import { FC } from "react";
+import Link from "next/link";
+
 import Container from "@common/Container";
 import { siteConfig } from "@utils/siteConfig";
-import Link from "next/link";
 import SocialLinks from "@atoms/SocialLinks";
 
 const Footer: FC = () => {
@@ -16,7 +17,7 @@ const Footer: FC = () => {
         <div className="mt-6 flex justify-between flex-wrap gap-4">
           <div>
             <p className="font-medium">{siteConfig.exploreTag}</p>
-            <SocialLinks />
+            <SocialLinks socialLinks={siteConfig.socialLinks}/>
           </div>
           <div>
             <p className="text-neutral-400 text-sm">{siteConfig.currentlyAt}</p>

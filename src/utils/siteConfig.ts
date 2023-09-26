@@ -1,5 +1,5 @@
 
-type SiteConfig = {
+export type SiteConfig = {
   siteName: string;
   description: string;
   currentlyAt: string;
@@ -14,6 +14,7 @@ type SiteConfig = {
     linkedin: string;
     instagram: string;
     facebook: string;
+    copy: string;
   };
 };
 
@@ -25,7 +26,7 @@ export const siteConfig: SiteConfig = {
   currentPlace: "South Korea",
   exploreTag: "#exploretheworld",
   copyright: "All rights are reserved | Copyright",
-  madeWith: "Made By", 
+  madeWith: "Made By",
   socialLinks: {
     twitter: "#",
     youtube: "#",
@@ -33,5 +34,6 @@ export const siteConfig: SiteConfig = {
     linkedin: "#",
     instagram: "#",
     facebook: "#",
+    copy: "#",
   },
 };

@@ -4,6 +4,7 @@ import { notFound } from "next/navigation";
 import { DUMMY_POSTS } from "@temp/collections";
 import { Post } from "@temp/temp.types";
 import Container from "@common/Container";
+import PostHero from "@post/PostHero";
 
 const generateStaticParams = async () => {
   return DUMMY_POSTS.map((post:Post) => {
@@ -19,7 +20,6 @@ interface IPostPage {
 
 const PostPage: FC<IPostPage> = (props) => {
   const { params: { slug } } = props;
-
   const post = DUMMY_POSTS.find((post: Post) => post.slug === slug);
 
   if (!post) {
@@ -28,6 +28,7 @@ const PostPage: FC<IPostPage> = (props) => {
 
   return (
     <Container>
+      <PostHero post={post}/>
     </Container>
   )
 }
