@@ -9,7 +9,7 @@ const PostBody: FC<IPostBody> = (props) => {
 
   return (
     <article>
-      {body}
+      <p className="text-sm text-justify">{body}</p>
     </article>
   )
 }

@@ -70,7 +70,7 @@ const SocialLinks: FC<ISocialLinks> = (props) => {
   return (
     <div className={`flex gap-2 text-neutral-500 ${
       isShareUrl
-      ? "flex-col"
+      ? "flex-row md:flex-col"
       : "items-center py-2"
     }`}>
       {links.map((obj: LinkObj, _i: number) => {

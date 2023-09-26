@@ -27,7 +27,7 @@ const PostCard: FC<IPostCard> = (props) => {
           height={300}
           alt="post"
           className={`w-full object-cover rounded-md 
-          object-center max-h-[300px] hover:shadow-xl
+          object-center h-full max-h-[300px] hover:shadow-xl
           ${reverse && "md:order-last"}`} />
         <PostContent post={post} />
       </Link>

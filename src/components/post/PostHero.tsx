@@ -3,9 +3,6 @@ import Image from "next/image";
 
 import { Post } from "@temp/temp.types";
 import PostContent from "@post/PostContent";
-import PostBody from "@post/PostBody";
-import SocialLinks from "@atoms/SocialLinks";
-import { generateSocialShareUrls } from "@lib/helpers";
 
 
 interface IPostHero {
@@ -13,7 +10,6 @@ interface IPostHero {
 }
 const PostHero: FC<IPostHero> = (props) => {
   const { post } = props;
-  const pageUrl = typeof window !== "undefined" ? window.location.href : "";
 
   return (
     <>
@@ -24,16 +20,6 @@ const PostHero: FC<IPostHero> = (props) => {
         alt={post.title}
         className="rounded-md object-cover object-center mt-6 h-[300px] md:h-[500px]"
       />
-      <section className="mt-10 flex gap-10">
-        <div className="relative">
-          <div className="sticky top-20">
-            <SocialLinks
-              socialLinks={generateSocialShareUrls(post, pageUrl)}
-              isShareUrl />
-          </div>
-        </div>
-        <PostBody body={post.body} />
-      </section>
     </>
   )
 }

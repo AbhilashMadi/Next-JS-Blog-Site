@@ -6,7 +6,7 @@ export enum headers {
 };
 
 export enum labels {
-
+  shareThisContent = "Share this content on:"
 };
 
 export enum buttons {
