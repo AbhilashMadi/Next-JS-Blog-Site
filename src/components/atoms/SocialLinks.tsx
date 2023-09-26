@@ -22,7 +22,7 @@ const SocialLinks: FC<ISocialLinks> = (props) => {
     {
       icon: <TwitterIcon
         size={18}
-        className="hover:text-cyan-400 cursor-pointer hover:scale-105" />,
+        className={"hover:text-cyan-400 cursor-pointer hover:scale-105"} />,
       href: socialLinks.twitter,
     },
     {
@@ -68,9 +68,15 @@ const SocialLinks: FC<ISocialLinks> = (props) => {
   ];
 
   return (
-    <div className="flex gap-2 items-center py-2 text-neutral-500">
+    <div className={`flex gap-2 text-neutral-500 ${
+      isShareUrl
+      ? "flex-col"
+      : "items-center py-2"
+    }`}>
       {links.map((obj: LinkObj, _i: number) => {
-        return <Link href={obj.href} key={_i}>
+        return <Link 
+        href={obj.href} key={_i} 
+        className={`${isShareUrl && "bg-neutral-200 px-3 py-2 rounded-md text-black hover:bg-zinc-800 hover:text-white transition-colors duration-300 ease-in-out"}`}>
           {obj.icon}
         </Link>
       })}
