@@ -2,8 +2,8 @@ import { FC } from "react";
 import Image from "next/image";
 
 import { Post } from "@temp/temp.types";
-import PostContent from "./PostContent";
-'@post/PostCard';
+import PostContent from "@post/PostContent";
+import PostBody from "@post/PostBody";
 import SocialLinks from "@atoms/SocialLinks";
 import { generateSocialShareUrls } from "@lib/helpers";
 
@@ -32,9 +32,7 @@ const PostHero: FC<IPostHero> = (props) => {
               isShareUrl />
           </div>
         </div>
-        <article className="bg-slate-200 w-full">
-          <p>body</p>
-        </article>
+        <PostBody body={post.body} />
       </section>
     </>
   )
