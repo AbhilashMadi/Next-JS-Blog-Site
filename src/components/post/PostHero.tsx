@@ -14,7 +14,6 @@ interface IPostHero {
 const PostHero: FC<IPostHero> = (props) => {
   const { post } = props;
   const pageUrl = typeof window !== "undefined" ? window.location.href : "";
-  console.log(pageUrl);
 
   return (
     <>
